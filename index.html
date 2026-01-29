@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+
+<meta charset="UTF-8">
+    <title>Lu Maltsis</title>
+
+    <meta content="Lu Maltsis" property="og:title" />
+    <meta content="PhD Student in Computer Science at the University of Manchester" property="og:description" />
+    <meta content="https://lmaltsis.github.io/" property="og:url" />
+    <meta content="#f4f4f4" data-react-helmet="true" name="theme-color" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    body {
+        font-family: segoe ui,Roboto,Oxygen,Ubuntu,Cantarell,open sans,helvetica neue,sans-serif;
+        background-color: #f4f4f4;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        font-size: x-large;
+    }
+
+    main {
+        margin-top: 2rem;
+        padding: 4rem;
+        background-color: white;
+
+        display: grid;
+        justify-items: left;
+        width: max(50%, 500px);
+    }
+
+    h1 {
+        color: #222222;
+    }
+
+    #icons {
+        margin: 24px;
+        justify-self: center;
+    }
+
+    .icon {
+        margin: 8px;
+    }
+
+    .card {
+        padding-top: 30px;
+        border-top:#3e3e3e solid 1px;
+    }
+  </style>
+
+</head>
+<body>
+    <main>
+        <h1>
+            Lu Maltsis
+        </h1>
+        PhD Student<br>
+        University of Manchester<br>
+        <a id="email" href="mailto:firstname.lastname[at]manchester.ac.uk">firstname.lastname[at]manchester.ac.uk</a>
+        <script>
+            // very safe cipher, unbreakable even
+            let enc = "yh.znygfvf@cbfgtenq.znapurfgre.np.hx";
+            let dec = "";
+            for (char of enc) {
+                let code = char.charCodeAt(0);
+                if (65 <= code && code < 65 + 26) {
+                    code -= 65;
+                    code += 13;
+                    code %= 26;
+                    code += 65;
+                } else if (97 <= code && code < 97 + 26) {
+                    code -= 97;
+                    code += 13;
+                    code %= 26;
+                    code += 97;
+                }
+                dec += String.fromCharCode(code);
+            }
+            document.getElementById("email").innerHTML = dec;
+            document.getElementById("email").setAttribute("href", "mailto:" + dec);
+        </script>
+
+        <div id="icons">
+            <!-- Mastodon, Infosec Exchange -->
+            <a class="icon" href="https://infosec.exchange/@lmaltsis"><img alt="mastodon" src="https://simpleicons.org/icons/mastodon.svg" style="height: 1.5em"></a>
+            <!-- Bluesky -->
+            <a class="icon" href="https://bsky.app/profile/lmaltsis.bsky.social"><img alt="bsky" src="https://simpleicons.org/icons/bluesky.svg" style="height: 1.5em"></a>
+            <!-- Github -->
+            <a class="icon" href="https://github.com/lmaltsis"><img alt="github" src="https://simpleicons.org/icons/github.svg" style="height: 1.5em"></a>
+            
+        </div>
+
+        <div class="card">
+            <p>
+                I am a PhD student in Computer Science supervised by <a href="https://wintered.github.io/">Dominik Winterer</a>
+                at the University of Manchester.
+            </p>
+            <p>
+                I completed my bachelor's degree at ETH in Zurich with a particular fascination for Compiler Design and Cybersecurity.
+            </p>
+            <p>
+                My research is in Program Testing and Formal Methods, working with very complex input formats such as Programs or Proof Assistants.
+                Furthermore you can talk to me about Fuzzing, Symbolic Execution, Software Verification, Programming Language Design and more.
+            </p>
+        </div>
+
+    </main>
+
+</body>
